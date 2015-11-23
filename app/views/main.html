@@ -1,0 +1,7 @@
+<input ng-model="query" type="text" placeholder="Filter by" autofocus>
+
+<ul>
+    <li ng-repeat="image in images | filter:query | orderBy: 'modified'">
+        <img ng-src="{{image.src}}" title="{{image.name}}"/>
+    </li>
+</ul>
