@@ -9,6 +9,9 @@
  */
 angular.module('weddingGalleryApp')
   .controller('AboutCtrl', function ($scope, $routeParams) {
-	$scope.data = images[$routeParams.id];
+    var index = $routeParams.id;
+	  $scope.data = images[index];
+	  $scope.nextImage = '/images/'+(index++);
+	  $scope.prevImage = '/images/'+(index--);
   });
 
