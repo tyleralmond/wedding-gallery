@@ -1,15 +1,17 @@
-<!-- <input ng-model="query" type="text" placeholder="Filter by" autofocus>
+<input ng-model="query" type="text" placeholder="Filter by" autofocus>
 
 <ul>
-    <li ng-repeat="image in images | filter:query | orderBy: 'modified'">
+    <li ng-repeat="image in images | filter:query">
+      <a ng-href="#/images/{{$index}}">
         <img ng-src="{{image.src}}" title="{{image.name}}"/>
+      </a>
     </li>
-</ul> -->
+</ul>
 
 
-<ul>
+<!-- <ul>
   <li ng-repeat="image in images">
-    <a ng-href="{{image.full}}">
+    <a ng-href="#/images/{{$index}}">
       <img ng-src="{{image.src}}" alt="{{image.title}}">
     </a>
   </li>
