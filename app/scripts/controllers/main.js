@@ -9,6 +9,12 @@
  */
 angular.module('weddingGalleryApp')
   .controller('MainCtrl', function ($scope) {
+    // $scope.data = {};
+    
+    // images.query(function() {
+    //   $scope.data.images = images;
+    // });
+
     $scope.images = images;
 
     // $scope.images = [

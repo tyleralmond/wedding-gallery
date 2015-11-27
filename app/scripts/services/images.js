@@ -7,17 +7,9 @@
  * # images
  * Factory in the weddingGalleryApp.
  */
-angular.module('weddingGalleryApp')
-  .factory('images', function () {
-    // Service logic
-    // ...
+// angular.module('weddingGalleryApp')
+//   .factory('images', function ($resource) {
 
-    var meaningOfLife = 42;
+//     return $resource('/php-to-js-array.php', {});
 
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
-    };
-  });
+//   });
