@@ -12,6 +12,6 @@ angular.module('weddingGalleryApp')
     	var index = $routeParams.id;
 	 	$scope.data = images[index];
 	  	$scope.nextImage = '#/images/'+(++index);
-	 	$scope.prevImage = '#/images/'+(--index);
+	 	$scope.prevImage = '#/images/'+(index - 1);
   });
 

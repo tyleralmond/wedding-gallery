@@ -1,6 +1,6 @@
 <a class="close" href="#/">X</a>
 
-<img class="full-img" ng-src="{{data.full}}" alt="">
+<img class="full-img record" ng-src="{{data.full}}" alt="" ng-animate-ref="{{data.name}}">
 
-<a ng-href="{{prevImage}}">Back</a>
-<a ng-href="{{nextImage}}">Next</a>
+<a class="nav nav--left" ng-href="{{prevImage}}">Back</a>
+<a class="nav nav--right" ng-href="{{nextImage}}">Next</a>
