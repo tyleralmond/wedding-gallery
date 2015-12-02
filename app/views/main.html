@@ -1,12 +1,18 @@
-<input ng-model="query" type="text" placeholder="Filter by" autofocus>
+<!-- <input ng-model="query" type="text" placeholder="Filter by" autofocus> -->
 
-<ul>
-    <li ng-repeat="image in images | filter:query">
-      <a ng-href="#/images/{{$index}}">
-        <img ng-src="{{image.src}}" title="{{image.name}}" class="record" ng-animate-ref="{{image.name}}"/>
-      </a>
-    </li>
-</ul>
+<!-- <header class="hero"></header> -->
+
+<div class="main">
+
+  <ul>
+      <li ng-repeat="image in images | filter:query">
+        <a ng-href="#/images/{{$index}}">
+          <img ng-src="{{image.src}}" title="{{image.name}}" class="record" ng-animate-ref="{{image.name}}"/>
+        </a>
+      </li>
+  </ul>
+  
+</div>
 
 
 <!-- <ul>
