@@ -44,12 +44,13 @@ ul {
   // flex-wrap: wrap;
   // flex-direction: column;
   // height: 100vh;
-  column-count: 4;
+  column-count: 3;
   column-gap: 0;
-  padding: 0 2px;
+  padding: 0;
   margin-top: 100px;
   margin-bottom: 0;
   width: 95%;
+  max-width: 1054px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -78,7 +79,7 @@ li {
     top: 0;
     left: 0;
     right: 0;
-    background: #444;
+    background: #52100B;
     z-index: -1;
   }
 
@@ -135,32 +136,38 @@ body {
 
 .view.ng-animate {
   position:absolute;
-  top:0;
+  // top:0;
   left:0;
-  width:100%;
-  // min-height:500px;
+  right: 0;
+  // width:100%;
+  // min-height: 100vh;
 }
 
 .record.ng-anchor {
-  transition: 250ms ease-in; 
+  transition: 100ms ease-in; 
 }
 
 .view.ng-enter, .view.ng-leave {
-  transition: 250ms ease-in;
+  transition: 150ms ease-in;
+}
+
+.view.ng-enter {
+  transition-delay: 0;
 }
 
 .view.ng-enter {
   opacity: 0;
-  transform: translateX(5%)
+  // transform: translateX(5%)
 }
 
 .view.ng-enter.ng-enter-active, .view.ng-leave {
   opacity: 1;
-  transform: translateX(0)
+  // transform: translateX(0)
 }
 
 .view.ng-leave.ng-leave-active {
   opacity: 0;
-  transform: translateX(-5%);
+  // transform: translateX(-5%);
 }
+
 
