@@ -7,6 +7,9 @@ $easing-easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $easing-easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
 $easing-easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
 
+$col-primary: #03f8b6;
+$col-text: #666;
+
 
 .browsehappy {
   margin: 0.2em 0;
@@ -29,8 +32,9 @@ html {
 
 body {
   margin: 0;
-  background-color: #222;
-  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  // background-color: #222; 
+  // color: white;
 }
 
 img {
@@ -47,9 +51,9 @@ ul {
   column-count: 3;
   column-gap: 0;
   padding: 0;
-  margin-top: 100px;
+  margin-top: 0px;
   margin-bottom: 0;
-  width: 95%;
+  width: 100%;
   max-width: 1054px;
   margin-left: auto;
   margin-right: auto;
@@ -57,12 +61,17 @@ ul {
 
 li {
   break-inside: avoid;
-  display: inline-block;
+  // display: inline-block;
   // width: 25%;
   list-style: none;
-  padding: 0 2px;
+  padding: 10px;
+
+  a {
+    display: block;
+  }
 
   img {
+    vertical-align: bottom;
     width: 100%;
   }
 
@@ -72,25 +81,73 @@ li {
 
 .main {
 
-    &::before {
-    content: '';
-    height: 200px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #52100B;
+  //   &::before {
+  //   content: '';
+  //   height: 200px;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   background: #52100B;
+  //   z-index: -1;
+  // }
+
+}
+
+// header
+
+.header {
+  // height: 50px;
+}
+
+.logo {
+  width: 300px;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: -250px;
+}
+
+.hero {
+  width: 98%;
+  height: calc(90vh - 50px);
+  background-image: url('/img/hero.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  // border-top: 10px solid white;
+  // border-right: 10px solid white;
+  // border-left: 10px solid white;
+  // clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
+}
+
+// body
+
+.quote {
+  position: relative;
+  display: block;
+  width: 500px;
+  margin: 150px auto;
+  font-size: 18px;
+  line-height: 1.625em;
+  color: $col-text;
+  
+  &::before {
+    content: "\201C";
+    position: absolute;
     z-index: -1;
+    top: 70px;
+    left: -100px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 300px;
+    font-style: italic;
+    color: $col-primary;
   }
 
 }
 
-.hero {
-  height: 90vh;
-  width: 100%;
-  background-image: url('/img/hero.jpg');
-  background-size: cover;
-  background-attachment: fixed;
+.date {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
 }
 
 // full image
