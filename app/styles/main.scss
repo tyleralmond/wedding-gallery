@@ -50,11 +50,11 @@ ul {
   // height: 100vh;
   column-count: 3;
   column-gap: 0;
-  padding: 0;
+  padding: 0 10px 0 10px;
   margin-top: 0px;
   margin-bottom: 0;
   width: 100%;
-  max-width: 1054px;
+  max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -101,15 +101,24 @@ li {
 }
 
 .logo {
-  width: 300px;
+  width: 250px;
   margin-top: 25px;
   margin-left: 25px;
-  margin-bottom: -250px;
+  margin-bottom: -200px;
+}
+
+.hero-wrap {
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+  width: calc(100% - 20px);
+  height: calc(90vh - 50px);
+  background: #222;
 }
 
 .hero {
-  width: 98%;
-  height: calc(90vh - 50px);
+  width: 100%;
+  height: 100%;
   background-image: url('/img/hero.jpg');
   background-size: cover;
   background-attachment: fixed;
@@ -185,6 +194,10 @@ li {
   right: 0;
 }
 
+
+
+
+
 // ng animations
 
 body {
@@ -205,7 +218,7 @@ body {
 }
 
 .view.ng-enter, .view.ng-leave {
-  transition: 150ms ease-in;
+  transition: 250ms ease-in;
 }
 
 .view.ng-enter {
@@ -225,6 +238,27 @@ body {
 .view.ng-leave.ng-leave-active {
   opacity: 0;
   // transform: translateX(-5%);
+}
+
+
+
+
+
+// animations
+
+.scale {
+  animation: scale 1s $easing-easeOutExpo both 500ms;
+}
+
+@keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 
