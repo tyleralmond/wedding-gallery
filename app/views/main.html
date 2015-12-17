@@ -16,7 +16,7 @@
 
   <ul>
       <li ng-repeat="image in images | filter:query">
-        <a ng-href="#/images/{{$index}}">
+        <a ui-sref="main.images({id: $index})">
           <img ng-src="{{image.src}}" title="{{image.name}}" class="record" ng-animate-ref="{{image.name}}"/>
         </a>
       </li>
@@ -24,11 +24,4 @@
   
 </div>
 
-
-<!-- <ul>
-  <li ng-repeat="image in images">
-    <a ng-href="#/images/{{$index}}">
-      <img ng-src="{{image.src}}" alt="{{image.title}}">
-    </a>
-  </li>
-</ul>
+<div class="view" ui-view></div>
