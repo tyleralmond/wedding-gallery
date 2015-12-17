@@ -133,11 +133,14 @@ li {
 .quote {
   position: relative;
   display: block;
-  width: 500px;
+  width: 550px;
   margin: 150px auto;
   font-size: 18px;
   line-height: 1.625em;
   color: $col-text;
+  padding: 50px;
+  border-top: 2px solid $col-primary;
+  border-bottom: 2px solid $col-primary;
   
   &::before {
     content: "\201C";
@@ -148,7 +151,7 @@ li {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 300px;
     font-style: italic;
-    color: $col-primary;
+    color: #ccc;
   }
 
 }
