@@ -14,8 +14,8 @@
 
 <div class="main">
 
-  <ul>
-      <li ng-repeat="image in images | filter:query">
+  <ul data-sr-container='{ "reset":true, "vFactor": 0.2 }'>
+      <li ng-repeat="image in images | filter:query" data-sr="enter bottom over 500ms after 1s">
         <a ui-sref="main.images({id: $index})">
           <img ng-src="{{image.src}}" title="{{image.name}}" class="record" ng-animate-ref="{{image.name}}"/>
         </a>

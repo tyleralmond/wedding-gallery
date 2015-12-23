@@ -158,6 +158,7 @@ li {
 
 .date {
   position: fixed;
+  z-index: 2;
   bottom: 25px;
   right: 25px;
 }
@@ -166,6 +167,7 @@ li {
 
 .full-img-wrap {
   position: fixed;
+  z-index: 3;
   top: 0;
   right: 0;
   bottom: 0;
